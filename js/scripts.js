@@ -1,10 +1,15 @@
 $(function(){
 
+var color;
+var food;
+var pet;
 
 $("#form1").submit(function(event){
-    var color = $("input:radio[name=color]:checked").val();
-    console.log(color);
-    $("#test").text(color);
+    color = $("input:radio[name=color]:checked").val();
+    event.preventDefault();
+    food = $("input:radio[name=food]:checked").val();
+    event.preventDefault();
+    pet = $("input:radio[name=animal]:checked").val();
     event.preventDefault();
 })
 
